@@ -15,22 +15,25 @@ function HikeList({ hikingtrips }) {
         trip.length > length &&
         (diff === "all" || diff === trip.difficulty)
     )
-
-    .map((t) => <Hike t={t} key={t.id} />);
+    .map((trip) => <Hike trip={trip} key={trip.id} />);
 
   return (
     <div>
       <SearchBar setQuery={setQuery} />
       <p></p>
+      <div>
+        <output>Trip length {length} miles</output>
+      </div>
       <input
         type="range"
         id="volume"
         name="volume"
         min="2"
-        max="8.5"
+        max="8"
         defaultValue="2"
         onChange={(event) => setlength(event.target.value)}
       />
+
       <p></p>
       <select
         name="Difficulty"

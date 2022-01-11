@@ -40,15 +40,21 @@
   color: white;
   background-color: black;
 }
-img {
+.img-detail {
+  width: 450px;
+  height: 350px;
+  border-radius: 5px;
+  transition: 0.3s;
+}
+img:hover {
+  opacity: 0.7;
+}
+.img-link {
   width: 450px;
   height: 350px;
   border-radius: 5px;
   cursor: pointer;
   transition: 0.3s;
-}
-img:hover {
-  opacity: 0.7;
 }
 .horizontal-slider {
   width: 100%;
