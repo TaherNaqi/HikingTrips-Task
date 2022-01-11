@@ -11,6 +11,7 @@ function App() {
   return (
     <div className="App">
       <Navbar />
+      <p></p>
       <Routes>
         <Route path="/404" element={<PageNotFound />} />
         <Route path="/" element={<HikeList hikingtrips={hikingtrips} />} />

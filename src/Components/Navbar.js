@@ -1,13 +1,11 @@
 import React from "react";
 function Navbar() {
   return (
-    <ul className="nav">
-      <li className="nav-item">
-        <a className="nav-link" href="/">
-          Home
-        </a>
-      </li>
-    </ul>
+    <nav className="navbar navbar-dark bg-black">
+      <a className="navbar-brand" href="/">
+        Home
+      </a>
+    </nav>
   );
 }
 
