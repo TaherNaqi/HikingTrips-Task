@@ -1,23 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import React, { useState } from "react";
+import hikingtrips from "./Hikingtrips";
+import HikeList from "./Components/HikeList";
+import Detail from "./Components/Detail";
+import Navbar from "./Components/Navbar";
+import { Route, Routes } from "react-router-dom";
+import PageNotFound from "./Components/PageNotFound";
 function App() {
+  // const [trip, settrip] = useState(hikingtrips[0]);
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Navbar />
+      <Routes>
+        <Route path="/404" element={<PageNotFound />} />
+        <Route path="/" element={<HikeList hikingtrips={hikingtrips} />} />
+        <Route path="/:slug" element={<Detail />} />
+      </Routes>
     </div>
   );
 }
